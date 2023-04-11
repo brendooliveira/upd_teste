@@ -1,11 +1,5 @@
 <h5> Consulta de Clientes</h5>
 
-@if (session('sucesso'))
-<div class="alert alert-success">
-    {{ session('sucesso') }}
-</div>
-@endif
-
 <form action="{{ url("/") }}" class="ajax_off" method="get">
 
 <input type="hidden" name="search" value="true">
@@ -45,7 +39,7 @@
 
     <div class="col-lg-12 text-end">
         <button class="btn btn-primary">Pesquisar</button>
-        <button class="btn btn-secondary clear">Limpar</button>
+        <a href="{{url("/")}}"  class="btn btn-secondary clear">Limpar</a>
     </div>
 </div>
 </form>
