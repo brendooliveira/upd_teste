@@ -23,32 +23,33 @@
                 </thead>
                 <tbody>
                     @foreach ($client as $client)
-                    <tr>
-                        <td><a href="{{url("/update/$client->id")}}" class="btn btn-success w-100">Editar</a></td>
-                        <td>
-                            <form action="{{url("/deleted/$client->id")}}" class="ajax_off" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger w-100">Excluir</button>
-                            </form>
-                        </td>
-                        <td><a href="#" data-bs-toggle="modal" data-bs-target="#show{{$client->id}}" class="btn btn-info w-100">Ver</a></td>
-                        <td>{{$client->name}}</td>
-                        <td>{{$client->document}}</td>
-                        <td>{{$client->date_birth}}</td>
-                        <td>{{$client->states}}</td>
-                        <td>{{$client->city}}</td>
-                        <td>{{$client->genre}}</td>
-                    </tr>
-                    @include('web.view.modalCliente',['client',$client])
+                        <tr>
+                            <td><a href="{{ url("/update/$client->id") }}" class="btn btn-success w-100">Editar</a></td>
+                            <td>
+                                <form action="{{ url("/deleted/$client->id") }}" class="ajax_off" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger w-100">Excluir</button>
+                                </form>
+                            </td>
+                            <td><a href="#" data-bs-toggle="modal" data-bs-target="#show{{ $client->id }}"
+                                    class="btn btn-info w-100">Ver</a></td>
+                            <td>{{ $client->name }}</td>
+                            <td>{{ $client->document }}</td>
+                            <td>{{ $client->date_birth }}</td>
+                            <td>{{ $client->states }}</td>
+                            <td>{{ $client->city }}</td>
+                            <td>{{ $client->genre }}</td>
+                        </tr>
+                        @include('web.view.modalCliente', ['client', $client])
                     @endforeach
-            
+
                 </tbody>
 
-            </table> 
+            </table>
         </div>
     </div>
-   
+
 
 </div>
 
@@ -58,7 +59,7 @@
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#clients').DataTable({
                 responsive: true,
                 language: {
