@@ -39,7 +39,7 @@
 
     <div class="col-lg-12 text-end">
         <button class="btn btn-primary">Pesquisar</button>
-        <a href="{{url("/")}}"  class="btn btn-secondary clear">Limpar</a>
+        <a href="{{ url("/") }}"  class="btn btn-secondary clear">Limpar</a>
     </div>
 </div>
 </form>
