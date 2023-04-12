@@ -9,8 +9,8 @@
     <title>{{ $title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     @yield('css')
-    <link rel="stylesheet" href="{{ url('/web/assets/styles.css') }}">
-    <link rel="stylesheet" href="{{ url('/web/assets/message.css') }}">
+    <link rel="stylesheet" href="{{ asset('/web/assets/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('/web/assets/message.css') }}">
 </head>
 
 <body>
@@ -35,11 +35,11 @@
     </script>
 
 
-    <script src="{{ url('/web/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ url('/web/assets/js/jquery-ui.js') }}"></script>
-    <script src="{{ url('/web/assets/js/jquery.form.js') }}"></script>
-    <script src="{{ url('/web/assets/js/jquery.mask.js') }}"></script>
-    <script src="{{ url('/web/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('/web/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/web/assets/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/web/assets/js/jquery.form.js') }}"></script>
+    <script src="{{ asset('/web/assets/js/jquery.mask.js') }}"></script>
+    <script src="{{ asset('/web/assets/js/scripts.js') }}"></script>
 
     @yield('scripts')
 </body>
